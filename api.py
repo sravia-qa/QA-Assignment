@@ -19,7 +19,7 @@ def home():
         uname = request.form['uname']
         upass = request.form['upass']
         mycursor = mydb.cursor()
-        sql = "select * from siteusers WHERE uname ='"+uname+"' AND upass ='" + upass + "'" 
+        sql = "select * from users WHERE uname ='"+uname+"' AND upass ='" + upass + "'" 
         mycursor.execute(sql)
         myresult = mycursor.fetchall()
         if len(myresult) == 0:
@@ -35,11 +35,11 @@ def createUser():
         f.close()
         return c
     if request.method == 'POST':
-        uname = request.form('uname')
-        upass = request.form('upass')
-        usecret = request.form('usecret')
+       uname = request.form['uname']
+        upass = request.form['upass']
+        usecret = request.form['usecret']
         mycursor = mydb.cursor()
-        sql = "INSERT into siteusers (uname, upass, usecret) VALUES (%s, %s, %s)"
+        sql = "INSERT into users (uname, upass, usecret) VALUES (%s, %s, %s)"
         val = (uname, upass, usecret)
         mycursor.execute(sql, val)
         mydb.commit()
