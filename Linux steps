@@ -12,9 +12,9 @@ git clone https://github.com/sravia-qa/QA-Assignment.git
 cd QA-Assignment/
 ls
 
-<NOW EXPLAIN THE 3 FILES- 2 HTML (Home, Create) and then api.py>
+GO THROUGH THE 3 FILES- 2 HTML (Home, Create) and then api.py>
 
-<tell audience we will install database mysql now>
+ we will install database mysql now>
 
 sudo apt install mysql-server
 sudo mysql
